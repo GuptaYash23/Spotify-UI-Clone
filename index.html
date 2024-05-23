@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Spotify - Web Player: Music for everyone</title>
+    <link rel="icon" href="assets/icon.png" type="image/icon" />
+    <link rel="stylesheet" href="main.css" />
+    <link rel="stylesheet" href="utility.css" />
+  </head>
+  <body>
+    <div class="container bcgblack flex-row">
+      <div id="sidesection" class="w25 bcgblack h100 br10">
+        <section id="sectionintro" class="bcgdg br10 mar5 pad10">
+          <div id="logodiv" class="Logodiv">
+            <img
+              src="assets/SpotifyLogo.svg"
+              alt="Spotify Logo"
+              class="fi"
+              height="24px"
+            />
+          </div>
+          <div id="homediv" class="Logodiv">
+            <img
+              src="assets/HomeLogo.svg"
+              alt="Home Logo"
+              height="27px"
+              id="homeicon"
+              class="icons"
+            />
+            <span class="colorwhite spanlogo"><a href="#Home">Home</a></span>
+          </div>
+          <div id="searchdiv" class="Logodiv">
+            <img
+              src="assets/SearchLogo.svg"
+              alt="Home Logo"
+              class="fi icons"
+              height="24px"
+            />
+            <span class="spanlogo colortextgray"
+              ><a href="#Search" class="colortextgray">Search</a></span
+            >
+          </div>
+        </section>
+
+        <section id="sectionplaylist" class="bcgdg br10 mar5 pad10">
+          <div id="librarydiv" class="flex-row w95 sb padh5">
+            <div id="libraryheading" class="flex-row">
+              <img
+                src="assets/LibraryIcon.svg"
+                alt="Library Icon"
+                height="26px"
+              />
+              <span id="libraryspan" class="colortextgray Logodiv"
+                >Your Library</span
+              >
+            </div>
+            <button id="librarylogo" class="flex-row">
+              <img
+                src="assets/plus.svg"
+                alt="Plus svg"
+                height="20px"
+                id="plusbutton"
+              />
+            </button>
+          </div>
+
+          <div id="songslibrary">
+            <div id="songslibraryheader">
+              <div class="in-block" id="songlibrarysno">#</div>
+              <div class="in-block" id="songnameheading">Track</div>
+              <div class="in-block" id="artistnameheading">Artists</div>
+              <div class="in-block" id="playbutton">
+                <img
+                  src="assets/playicon.png"
+                  width="20px"
+                  class="fi"
+                  alt="Playbutton"
+                />
+              </div>
+            </div>
+            <div id="songplaylibrary">
+              <ul id="songplaylist"></ul>
+            </div>
+          </div>
+
+          <div id="libraryfooter" class="flex-col">
+            <div id="librarynav">
+              <nav class="flex-row">
+                <ul id="navlist">
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/legal/end-user-agreement/"
+                      target="_blank"
+                      >Legal</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/safetyandprivacy/reporting-content"
+                      target="_blank"
+                      >Saftey & Privacy Center</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/legal/privacy-policy/"
+                      target="_blank"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/legal/cookies-policy/"
+                      target="_blank"
+                      >Cookies</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/legal/privacy-policy/#s3"
+                      target="_blank"
+                      >About Ads</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.spotify.com/in-en/accessibility"
+                      target="_blank"
+                      >Accessibility</a
+                    >
+                  </li>
+                </ul>
+              </nav>
+              <div id="languageoption">
+                <div id="language" class="flex-row">
+                  <img
+                    src="assets/globeicon.png"
+                    alt="Globe svg"
+                    height="15px"
+                  />
+                  <span class="colorwhite">English</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div id="gap"></div>
+      <main id="mainsection" class="bcgdg br15">
+        <div id="mainheader">
+          <div id="arrowbuttons">
+            <div class="arrowcont flex-row bgblack">
+              <img
+                src="assets/left.png"
+                alt="Before Button"
+                class="fi"
+                width="20px"
+              />
+            </div>
+            <div class="arrowcont flex-row bgblack">
+              <img
+                src="assets/left.png"
+                alt="Before Button"
+                width="20px"
+                class="fi rotate"
+              />
+            </div>
+          </div>
+
+          <div id="signbuttons">
+            <button id="signup">
+              <a
+                href="https://www.spotify.com/in-en/signup?forward_url=https%3A%2F%2Fopen.spotify.com%2F"
+                target="_blank"
+              >
+                Sign up
+              </a>
+            </button>
+            <button id="login">
+              <a
+                href="https://accounts.spotify.com/en-GB/login?continue=https%3A%2F%2Fopen.spotify.com%2F"
+                target="_blank"
+              >
+                Log in
+              </a>
+            </button>
+          </div>
+        </div>
+
+        <div id="creatorscont">
+          <div id="creatorscontheading">
+            <h2 id="popart">Popular artists</h2>
+          </div>
+          <div id="creatorscardcont">
+            <!-- First Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Pritam.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">Pritam</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Pritam">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+            <!-- Second Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Arijit.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">Arijit Singh</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Singh">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+            <!-- Third Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Rahman.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">A.R. Rahman</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Rahman">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+            <!-- Fourth Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Vishal.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">Vishal Mishra</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Mishra">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+            <!-- Fifth Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Anirudh.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">Anirudh Ravichander</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Ravichander">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+            <!-- Sixth Creator -->
+            <div class="creatorscard flex-col">
+              <img
+                src="assets/artists/Vishal-Sehkhar.jpg"
+                alt="Pritam Image"
+                class="creatorspic"
+              />
+              <div class="creatorsdetail">
+                <span class="creatorsname">Vishal-Shekhar</span>
+                <span class="creatorstitle"> Artist </span>
+              </div>
+              <div class="playiconcont flex-row" id="Shekhar">
+                <img
+                  src="assets/playicon.png"
+                  alt="Play Icon"
+                  class="playicon"
+                />
+              </div>
+            </div>
+          </div>
+          <div id="songsplaylist">
+            <div id="playlistheading">
+              <div id="serialno" class="in-block">#</div>
+              <div id="track" class="in-block">Track</div>
+              <div id="artists" class="in-block">Artists</div>
+              <div id="durationdisplay" class="in-block">Duration</div>
+              <div id="download" class="in-block">
+                <img
+                  src="assets/import-icon.svg"
+                  class="fi"
+                  alt="Import Icon"
+                  height="20px"
+                />
+              </div>
+            </div>
+            <div id="songlisitings"></div>
+          </div>
+          <!-- Playlist bar -->
+          <div id="playlistbar">
+            <audio src="" id="currentaudio"></audio>
+            <div id="songinfo">
+              <!-- Song name -->
+            </div>
+            <div id="playbuttons">
+              <div id="previousbtn">
+                <img
+                  src="assets/backwards.svg"
+                  alt="Before Button"
+                  width="30px"
+                />
+              </div>
+              <div id="playbtn">
+                <img
+                  src="assets/playwhite.png"
+                  alt="Play button"
+                  id="playbtnimage"
+                />
+              </div>
+              <div id="nextbtn">
+                <img src="assets/forwards.svg" alt="Next Button" width="30px" />
+              </div>
+            </div>
+
+            <div id="songtime">
+              <div id="currenttime">
+                <!-- Current Time -->
+              </div>
+              <!--  -->
+              <div id="duration">
+                <!-- Duration -->
+              </div>
+            </div>
+
+            <div id="songvolume">
+              <img
+                src="assets/Volume.png"
+                alt="Volume icon"
+                width="20px"
+                height="20px"
+              />
+              <input
+                type="range"
+                id="volumeSlider"
+                min="0"
+                max="1"
+                step="0.01"
+                value="1"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
